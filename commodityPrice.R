@@ -11,6 +11,8 @@ Quandl.auth("TE6qk7bjfVjrDuqVzs7A")
 
 start = "1990-01-01"
 
+
+git clone https://github.com/lucarno/commodityPrice
 ##############
 #SPOT PRICES##
 ##############
@@ -64,8 +66,4 @@ wheat$crop = 'wheat'
 
 prices = data.table(rbind(rice,corn,wheat,soybean,sugar,cocoa,orange,coffee))
 prices[,movingAverageYear:=rollapply(Value,12,mean,fill=NA,align = 'left'),by='crop']
-
-data = ts(prices)
-data/lag(data,-1) - 1
-
 
