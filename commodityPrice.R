@@ -7,7 +7,7 @@ library(ggplot2)
 library(ggthemes) 
 library(zoo)
 
-Quandl.auth("TE6qk7bjfVjrDuqVzs7A")
+Quandl.auth(".") #insert yours
 
 start = "1990-01-01"
 
